@@ -1,0 +1,35 @@
+enable: true
+log_level: DEBUG
+mode: RASP
+validatorServiceEndpointURL: ws://your_validator_system_ip:54321
+resource_service_endpoint_url: http://your_validator_system_ip:54322
+force_complete_disable: false
+securityHomePath: "/tmp/k2logs"
+detection:
+ disable_rci: false
+ disable_rxss: false
+ disable_deserialization: false
+policy:
+ version: built-in
+ policyPull: false
+ policyPullInterval: 0
+ vulnerabilityScan:
+   enabled: false
+   iastScan:
+     enabled: false
+     probing:
+       interval: 1
+       batchSize: 10
+ protectionMode:
+   enabled: false
+   ipBlocking:
+     enabled: false
+     attackerIpBlocking: false
+     ipDetectViaXFF: false
+   apiBlocking:
+     enabled: false
+     protectAllApis: false
+     protectKnownVulnerableApis: false
+     protectAttackedApis: false
+ sendCompleteStackTrace: false
+ enableHTTPRequestPrinting: false
