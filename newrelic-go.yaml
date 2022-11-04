@@ -4,7 +4,7 @@ mode: RASP
 validatorServiceEndpointURL: ws://your_validator_system_ip:54321
 resource_service_endpoint_url: http://your_validator_system_ip:54322
 force_complete_disable: false
-securityHomePath: "/tmp/k2logs"
+sec_home_path: "/tmp/k2logs"
 detection:
  disable_rci: false
  disable_rxss: false
