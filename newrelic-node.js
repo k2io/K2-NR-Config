@@ -6,7 +6,7 @@
  * description of configuration variables and their potential values.
  */
 exports.config = {
-  host: "staging-collector.newrelic.com",
+  host: staging-collector.newrelic.com,
   /**
    * Array of application names.
    */
@@ -14,7 +14,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: 'license key here',
+  license_key: 'license_key_here',
   /**
    * This setting controls distributed tracing.
    * Distributed tracing lets you see the path that a request takes through your
@@ -71,9 +71,8 @@ exports.config = {
   security: {
     enable: true,
     sec_home_path: require('path').join(process.cwd(), 'k2home'),
-    sec_log_file_name: require('path').join(process.cwd(), 'k2home', 'logs', 'security_agent.log'),
     mode: 'RASP',
-    log_level: 'INFO',
+    log_level: 'DEBUG',
     validator_service_endpoint_url: 'ws://your_validator_system_ip:54321',
     resource_service_endpoint_url: 'http://your_validator_system_ip:54322',
     force_complete_disable: false,
