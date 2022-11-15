@@ -48,11 +48,11 @@ common: &default_settings
     #      protectAttackedApis: false
 
   # Required license key associated with your New Relic account.
-  license_key: you_license_key
+  license_key: your_license_key
   
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
-  app_name: your_app_name
+  # app_name: your_app_name
   
   distributed_tracing:
     enabled: true
