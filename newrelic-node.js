@@ -6,11 +6,11 @@
  * description of configuration variables and their potential values.
  */
 exports.config = {
-  host: staging-collector.newrelic.com,
+  host: 'staging-collector.newrelic.com',
   /**
    * Array of application names.
    */
-  //app_name: ['My Application'],
+  // app_name: ['My Application'],
   /**
    * Your New Relic license key.
    */
