@@ -1,8 +1,7 @@
 enable: true
 log_level: DEBUG
 mode: RASP
-validatorServiceEndpointURL: ws://your_validator_system_ip:54321
-resource_service_endpoint_url: http://your_validator_system_ip:54322
+validatorServiceEndpointURL: your_validator_system_ip
 force_complete_disable: false
 sec_home_path: "/tmp/k2logs"
 detection:

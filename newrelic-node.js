@@ -73,8 +73,7 @@ exports.config = {
     sec_home_path: require('path').join(process.cwd(), 'k2home'),
     mode: 'RASP',
     log_level: 'DEBUG',
-    validator_service_endpoint_url: 'ws://your_validator_system_ip:54321',
-    resource_service_endpoint_url: 'http://your_validator_system_ip:54322',
+    validator_service_endpoint_url: 'your_validator_system_ip',
     force_complete_disable: false,
     detection: {
       disable_rci: false,

@@ -375,8 +375,7 @@ common: &default_settings
     # Default is RASP ( Potential to change to IAST )
     mode: RASP
     # K2's web-protect agent endpoint connection URLs
-    validator_service_endpoint_url: ws://your_validator_system_ip:54321
-    resource_service_endpoint_url: http://your_validator_system_ip:54322
+    validator_service_endpoint_url: your_validator_system_ip
     # To completely remove k2 security 
     # Deafult is NO_OP hooks, if the flag is set to true, security agent is deteched completely to attach/enable a restart of application is required.
     #force_complete_disable: false
