@@ -70,7 +70,7 @@ exports.config = {
   // specific to K2
   security: {
     enable: true,
-    sec_home_path: require('path').join(process.cwd(), 'k2home'),
+    sec_home_path: require('path').join(process.cwd(), 'your_sec_home_path'),
     mode: 'RASP',
     log_level: 'DEBUG',
     validator_service_endpoint_url: 'your_validator_system_ip',

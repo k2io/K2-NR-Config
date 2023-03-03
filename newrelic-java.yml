@@ -370,6 +370,7 @@ common: &default_settings
   security:
     # Default is false
     enable: true
+    csec_home_path: your_sec_home_path
     log_level: DEBUG
     # K2 security provides two modes IAST or RASP
     # Default is RASP ( Potential to change to IAST )
