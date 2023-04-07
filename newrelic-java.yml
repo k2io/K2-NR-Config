@@ -55,7 +55,7 @@ common: &default_settings
   # The levels in increasing order of verboseness are:
   #   off, severe, warning, info, fine, finer, finest
   # Default is info.
-  log_level: info
+  log_level: finer
 
   # Log all data sent to and from New Relic in plain text.
   # This setting is dynamic, so changes do not require restarting your application.
@@ -81,7 +81,7 @@ common: &default_settings
 
   # The log file directory.
   # Default is the logs directory in the newrelic.jar parent directory.
-  #log_file_path:
+  log_file_path: your_sec_home_path
 
   # Provides the ability to forward application logs to New Relic, generate log usage metrics,
   # and decorate local application log files with agent metadata for use with third party log forwarders.
@@ -369,46 +369,33 @@ common: &default_settings
   host: staging-collector.newrelic.com
   security:
     # Default is false
-    enable: true
-    sec_home_path: your_sec_home_path
-    log_level: DEBUG
-    # K2 security provides two modes IAST or RASP
-    # Default is RASP ( Potential to change to IAST )
-    mode: RASP
-    # K2's web-protect agent endpoint connection URLs
-    validator_service_endpoint_url: your_validator_system_ip
-    # To completely remove k2 security 
-    # Deafult is NO_OP hooks, if the flag is set to true, security agent is deteched completely to attach/enable a restart of application is required.
-    #force_complete_disable: false
-    
-    # User can disable the following type of security events from generating.
-    detection:
-      disable_rci: false
-      disable_rxss: false
-      disable_deserialization: false
+    enabled: true
 
-    # Following is the policy override for above mentioned mode. 
-    # Applicable only if uncommented in.
-    # Please uncomment entire 'policy' section and then further uncomment the desired parameter to over-ride.
-    #policy:
-    #  vulnerabilityScan:
-    #    #enabled: true
-    #    iastScan:
-    #      #enabled: true
-    #      probing:
-    #        #interval: 1
-    #        #batchSize: 5
-    #  protectionMode:
-    #    #enabled: false
-    #    ipBlocking:
-    #      #enabled: false
-    #      #attackerIpBlocking: false
-    #      #ipDetectViaXFF: false
-    #    apiBlocking:
-    #      #enabled: false
-    #      #protectAllApis: false
-    #      #protectKnownVulnerableApis: false
-    #      #protectAttackedApis: false
+    # NR security provides two modes IAST and RASP
+    # Default is IAST
+    mode: RASP
+
+    # New Relic's SaaS connection URLs
+    validator_service_url: your_validator_system_ip
+
+    # To completely disable security
+    # set agent.enabled flag to false
+    # If the flag is set to false,
+    # the security module is not loaded
+    # This property is read only once at
+    # application start.
+    # agent:
+    #   enabled: true
+
+    # Following category of security events
+    # can be disabled from generating.
+    # detection:
+    #   rci:
+    #     enabled: true
+    #   rxss:
+    #     enabled: true
+    #   deserialization:
+    #     enabled: true 
 
 # Application Environments
 # ------------------------------------------
