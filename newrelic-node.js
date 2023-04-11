@@ -67,46 +67,47 @@ exports.config = {
       'response.headers.x*'
     ]
   },
-  // specific to K2
+
+  /**
+   * Security Configurations
+   */
+
   security: {
-    enable: true,
-    sec_home_path: require('path').join(process.cwd(), 'your_sec_home_path'),
-    mode: 'RASP',
-    log_level: 'DEBUG',
-    validator_service_endpoint_url: 'your_validator_system_ip',
-    force_complete_disable: false,
-    detection: {
-      disable_rci: false,
-      disable_rxss: false,
-      disable_desearlization: false
+    /**
+     * To completely disable security, set agent.enabled flag to false. If the flag is set to false,     the security module is not loaded. This property is read only once at application start.
+     */
+    agent: {
+      enabled: true 
     },
-    policy: {
-      enforce: false,
-      vulnerabilityScan: {
-        enabled: false,
-        iastScan: {
-          enabled: false,
-          probing: {
-            interval: 1,
-            batchSize: 5
-          }
-        }
+
+    /**
+     * enables/disables security agent functions and generation of events.
+     */
+    enabled: true,
+
+    /**
+     *  NR security provides two modes IAST and RASP. Default is IAST
+     */
+    mode: 'RASP',
+
+    /**
+     * New Relic's SaaS connection URLs
+     */
+    validator_service_url: 'your_validator_system_ip',
+
+    /**
+     * Following category of security events can be disabled from generating.
+     */
+    detection: {
+      rci: {
+        enabled: true
       },
-      protectionMode: {
-        enabled: false,
-        ipBlocking: {
-          enabled: false,
-          attackerIpBlocking: false,
-          ipDetectViaXFF: false
-        },
-        apiBlocking: {
-          enabled: false,
-          protectAllApis: false,
-          protectKnownVulnerableApis: false,
-          protectAttackedApis: false
-        }
+      rxss: {
+        enabled: true
+      },
+      deserialization: {
+        enabled: true
       }
     }
   }
 }
-
