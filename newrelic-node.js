@@ -37,8 +37,7 @@ exports.config = {
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: 'trace',
-    filepath: 'your_sec_home_path'
+    level: 'trace'
   },
   /**
    * When true, all request headers except for those listed in attributes.exclude
