@@ -370,6 +370,14 @@ common: &default_settings
   security:
     # Default is false
     enabled: true
+    # To completely disable security
+    # set agent.enabled flag to false
+    # If the flag is set to false,
+    # the security module is not loaded
+    # This property is read only once at
+    # application start.
+    agent:
+      enabled: true
 
     # NR security provides two modes IAST and RASP
     # Default is IAST
@@ -377,15 +385,6 @@ common: &default_settings
 
     # New Relic's SaaS connection URLs
     validator_service_url: your_validator_system_ip
-
-    # To completely disable security
-    # set agent.enabled flag to false
-    # If the flag is set to false,
-    # the security module is not loaded
-    # This property is read only once at
-    # application start.
-    # agent:
-    #   enabled: true
 
     # Following category of security events
     # can be disabled from generating.
