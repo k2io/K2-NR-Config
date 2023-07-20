@@ -1,0 +1,13 @@
+version: "built-in"
+policyPull: false
+policyPullInterval: 0
+logLevel: "INFO"
+threading:
+  healthCheckInterval: 1
+cloudReporting:
+  logsUploadTos3: false
+  attacks: false
+  healthCheck: false
+  applicationDetails: false
+  vulnerabilityScan: false
+
