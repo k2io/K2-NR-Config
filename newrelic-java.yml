@@ -369,7 +369,7 @@ common: &default_settings
   host: staging-collector.newrelic.com
   security:
     # Default is false
-    enabled: true
+    enabled: security_enabled_flag
     # To completely disable security
     # set agent.enabled flag to false
     # If the flag is set to false,
@@ -377,7 +377,7 @@ common: &default_settings
     # This property is read only once at
     # application start.
     agent:
-      enabled: true
+      enabled: agent_enabled_flag
 
     # NR security provides two modes IAST and RASP
     # Default is IAST
