@@ -1,4 +1,4 @@
- enabled: true
+ enabled: security_enabled_flag
  mode: RASP
 
 #  # New Relic’s SaaS connection URLs
@@ -11,7 +11,7 @@
 #  # This property is read only once at
 #  # application start.
  agent:
-   enabled: false
+   enabled: agent_enabled_flag
 
 #  # Following category of security events
 #  # can be disabled from generating.
