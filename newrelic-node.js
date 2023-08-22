@@ -38,7 +38,7 @@ exports.config = {
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: 'debug'
+    level: 'your_log_level'
   },
   /**
    * When true, all request headers except for those listed in attributes.exclude
@@ -78,13 +78,13 @@ exports.config = {
      * To completely disable security, set agent.enabled flag to false. If the flag is set to false,     the security module is not loaded. This property is read only once at application start.
      */
     agent: {
-      enabled: true 
+      enabled: agent_enabled_flag 
     },
 
     /**
      * enables/disables security agent functions and generation of events.
      */
-    enabled: true,
+    enabled: security_enabled_flag,
 
     /**
      *  NR security provides two modes IAST and RASP. Default is IAST
