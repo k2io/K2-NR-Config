@@ -366,7 +366,6 @@ common: &default_settings
     # An example label
     #label_name: label_value
 
-  host: staging-collector.newrelic.com
   security:
     # Default is false
     enabled: security_enabled_flag
