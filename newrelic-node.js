@@ -6,7 +6,6 @@
  * description of configuration variables and their potential values.
  */
 exports.config = {
-  host: 'staging-collector.newrelic.com',
   newrelic_home: 'your_sec_home_path',
   /**
    * Array of application names.
