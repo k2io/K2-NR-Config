@@ -64,7 +64,7 @@ common: &default_settings
 
   # The number of backup log files to save.
   # Default is 1.
-  log_file_count: 1
+  log_file_count: 100
 
   # The maximum number of kbytes to write to any one log file.
   # The log_file_count must be set greater than 1.
