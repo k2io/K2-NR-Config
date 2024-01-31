@@ -13,7 +13,7 @@ common: &default_settings
   # account. For example, if your license key is 12345 use this:
   # license_key: '12345'
   # The key binds your agent's data to your account in the New Relic UI.
-  license_key: 'your license_key'
+  license_key: 'your_license_key'
 
   # Agent enabled
   # Use this setting to disable the agent instead of removing it from the startup command.
@@ -29,7 +29,7 @@ common: &default_settings
   # app_name: My Application;My Application 2
   # This setting is required. Up to 3 different application names can be specified.
   # The first application name must be unique.
-  app_name: My Application
+  app_name: 'your_app_name'
 
   # To enable high security, set this property to true. When in high
   # security mode, the agent will use SSL and obfuscated SQL. Additionally,
@@ -55,7 +55,7 @@ common: &default_settings
   # The levels in increasing order of verboseness are:
   #   off, severe, warning, info, fine, finer, finest
   # Default is info.
-  log_level: 'your log level'
+  log_level: your_log_level
 
   # Log all data sent to and from New Relic in plain text.
   # This setting is dynamic, so changes do not require restarting your application.
@@ -81,7 +81,7 @@ common: &default_settings
 
   # The log file directory.
   # Default is the logs directory in the newrelic.jar parent directory.
-  #log_file_path:
+  log_file_path: your_sec_home_path
 
   # Provides the ability to forward application logs to New Relic, generate log usage metrics,
   # and decorate local application log files with agent metadata for use with third party log forwarders.
@@ -389,7 +389,7 @@ common: &default_settings
   security:
     # Determines whether the security data is sent to New Relic or not. When this is disabled and agent.enabled is
     # true, the security module will run but data will not be sent. Default is false.
-    enabled: sec_enabled_flag
+    enabled: security_enabled_flag
 
     # Determines whether the low priority attack/vulnerability modules will instrument or not.
     # When this is disabled instrumentation of such modules will be skipped and vice versa, default is false.
@@ -399,10 +399,10 @@ common: &default_settings
     # New Relic Security provides two modes: IAST and RASP
     # Default is IAST. Due to the invasive nature of IAST scanning, DO NOT enable this mode in either a
     # production environment or an environment where production data is processed.
-    mode: IAST
+    mode: RASP
 
     # New Relic Security’s SaaS connection URL
-    validator_service_url: validator_system_ip
+    validator_service_url: your_validator_system_ip
 
     # To completely disable all security functionality, set this flag to false. This property is
     # read only once at application start. Default is false.
