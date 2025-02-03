@@ -410,7 +410,7 @@ common: &default_settings
       rci:
         enabled: true
       rxss:
-        enabled: true
+        enabled: false
       deserialization:
         enabled: true
 
