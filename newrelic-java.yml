@@ -467,7 +467,7 @@ common: &default_settings
         command_injection: false
         xpath_injection: false
         ssrf: false
-        rxss: true
+        rxss: false
 
     # These are the category of security events that can be detected. Set to false to disable detection of
     # individual event types. Default is true for each event type.
