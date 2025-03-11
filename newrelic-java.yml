@@ -404,7 +404,7 @@ common: &default_settings
     agent:
       enabled: agent_enabled_flag
 
-    iast_test_identifier: 'run-id'
+    # iast_test_identifier: 'run-id'
 
       # Security controllers
     scan_controllers:
